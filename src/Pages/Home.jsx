@@ -1,25 +1,14 @@
-// import { Link } from "react-router-dom";
 import SignIn from "../Pages/SignIn";
 
 const Home = () => {
 	return (
-		<section className="Home banner">
-			<div className="container-fluid banner-layer">
+		<section className="Home banner bg-danger d-flex justify-content-center text-align-center">
+			<div className="container-fluid banner-layer m-auto">
 				<div className="row">
 					<div className="col">
-						<h1 className="home-title d-flex justify-content-center align-items-center mb-5">Welcome To The FMCG</h1>
+						<h1 className="home-title d-flex justify-content-center align-items-center mb-5">To-DO List</h1>
 						<div className="d-flex justify-content-center align-items-center">
 							<SignIn />
-							{/* <button className="sf-button me-5">
-								<Link to="/signin" style={{ textDecoration: "none" }}>
-									<span className="text-black">SignIn</span>
-								</Link>
-							</button> */}
-							{/* <button className="sf-button me-5">
-								<Link to="/signup" style={{ textDecoration: "none" }}>
-									<span className="text-black">SignUp</span>
-								</Link>
-							</button> */}
 						</div>
 					</div>
 				</div>

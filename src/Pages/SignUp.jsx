@@ -20,13 +20,13 @@ const SignUp = () => {
 			if (!values.email) {
 				errors.email = "Email is Required";
 			} else if (!/^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,4}$/i.test(values.email)) {
-				errors.email = "Invalid emial address";
+				errors.email = "Invalid Email Address";
 			}
 			if (!values.password) {
-				errors.password = "password is Required";
+				errors.password = "Password is Required";
 			}
 			if (!values.confirmpassword) {
-				errors.confirmpassword = "password is Required";
+				errors.confirmpassword = "Confirm Password is Required";
 			}
 			return errors;
 		},
@@ -47,7 +47,7 @@ const SignUp = () => {
 			} catch (error) {
 				console.log(error);
 				Swal.fire({
-					title: "Already exist user or worng details please check",
+					title: "Already Exist User or Worng Dtails Please Check",
 					icon: "error",
 					confirmButtonText: "okay",
 				});
@@ -55,66 +55,65 @@ const SignUp = () => {
 		},
 	});
 	return (
-		<section>
-			<div className="container py-5">
+		<section className="signup d-flex justify-content-center text-align-center">
+			<div className="container m-auto">
 				<div className="row">
-					<div className="col-md">
-						<div className="card signin-card text-center w-25 mx-auto">
+					<div className="col">
+						<div className="card signup-card text-center p-3">
 							<div className="card-body">
-								<h2>Sign Up</h2>
+								<h2 className="mb-5">SIGN UP</h2>
 								<form onSubmit={formik.handleSubmit}>
-									<div className="my-4">
-										<span style={{ color: "red" }}>{formik.touched.name && formik.errors.name}</span>
-										<input
-											type="text"
-											class="form-control"
-											name="name"
-											placeholder="Name"
-											onChange={formik.handleChange}
-											value={formik.values.name}
-										/>
-										<br />
-										<span style={{ color: "red" }}>{formik.touched.email && formik.errors.email}</span>
-										<input
-											type="email"
-											class="form-control"
-											name="email"
-											placeholder="Email"
-											onChange={formik.handleChange}
-											value={formik.values.email}
-										/>
-										<br />
-										<span style={{ color: "red" }}>{formik.touched.password && formik.errors.password}</span>
-										<input
-											type="password"
-											class="form-control"
-											name="password"
-											placeholder="Password"
-											onChange={formik.handleChange}
-											value={formik.values.password}
-										/>
-										<br />
-										<span style={{ color: "red" }}>
-											{formik.touched.confirmpassword && formik.errors.confirmpassword}
-										</span>
-										<input
-											type="password"
-											class="form-control"
-											name="confirmpassword"
-											placeholder="Confirm Password"
-											onChange={formik.handleChange}
-											value={formik.values.confirmpassword}
-										/>
-										<br />
-									</div>
-									<div class="col mt-4">
-										<input type="submit" class="form-control btn btn-warning" value={"Create Account"} />
-									</div>
+									<span style={{ color: "red" }}>{formik.touched.name && formik.errors.name}</span>
+									<input
+										type="text"
+										className="form-control mb-3"
+										name="name"
+										placeholder="Name"
+										onChange={formik.handleChange}
+										value={formik.values.name}
+									/>
+									<br />
+									<span style={{ color: "red" }}>{formik.touched.email && formik.errors.email}</span>
+									<input
+										type="email"
+										className="form-control mb-3"
+										name="email"
+										placeholder="Email"
+										onChange={formik.handleChange}
+										value={formik.values.email}
+									/>
+									<br />
+									<span style={{ color: "red" }}>{formik.touched.password && formik.errors.password}</span>
+									<input
+										type="password"
+										className="form-control mb-3"
+										name="password"
+										placeholder="Password"
+										onChange={formik.handleChange}
+										value={formik.values.password}
+									/>
+									<br />
+									<span style={{ color: "red" }}>
+										{formik.touched.confirmpassword && formik.errors.confirmpassword}
+									</span>
+									<input
+										type="password"
+										className="form-control mb-5"
+										name="confirmpassword"
+										placeholder="Confirm Password"
+										onChange={formik.handleChange}
+										value={formik.values.confirmpassword}
+									/>
+
+									<button type="submit" className="sf-button mb-3" value={"Create Account"}>
+										SignUp
+									</button>
+
 									<div>
-										Already Have account?
-										<span className="text-primary fs-6 mx-2">
-											<Link to="/" className="text-primary">
-												Signin
+										<span className="fw-bolder text-black">Already Have an Account?</span>
+										<span>
+											<Link to="/" className="signup-link mx-2 fs-6 fw-bold">
+												SignIn
 											</Link>
 										</span>
 									</div>

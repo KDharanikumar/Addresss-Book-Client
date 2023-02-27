@@ -1,6 +1,7 @@
 import axios from "axios";
 import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
+// import AddProduct from "./AddProduct";
 
 const ProductList = () => {
 	const [products, setProducts] = useState([]);
@@ -34,13 +35,16 @@ const ProductList = () => {
 				<div className="row">
 					<div className="row">
 						<h1 className="">PRODUCTS LIST</h1>
+						{/* <AddProduct /> */}
 						<table>
 							<thead>
 								<tr>
-									<th>Name</th>
-									<th>Image</th>
-									<th>Price</th>
-									<th>Category</th>
+									<th>NAME</th>
+									<th>GENDER</th>
+									<th>MOBILE</th>
+									<th>E-MAIL</th>
+									<th>ADDRESS</th>
+									<th>PIN CODE</th>
 								</tr>
 							</thead>
 							<tbody>
@@ -48,9 +52,11 @@ const ProductList = () => {
 									products.map((product, index) => (
 										<tr key={index}>
 											<td>{product.name}</td>
-											<td>{product.image}</td>
-											<td>{product.price}</td>
-											<td>{product.category}</td>
+											<td>{product.gender}</td>
+											<td>{product.mobile}</td>
+											<td>{product.email}</td>
+											<td>{product.address}</td>
+											<td>{product.pincode}</td>
 											<Link className="btn btn-link" to={`/updateproduct/${product._id}`}>
 												Edit
 											</Link>

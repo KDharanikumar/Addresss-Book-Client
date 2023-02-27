@@ -8,10 +8,11 @@ const UpdateProduct = () => {
 	const prodID = params.prodID.toString();
 	const [productDetails, setProductDetails] = useState({
 		name: "",
-		price: "",
-		category: "",
-		image: "",
-		description: "",
+		gender: "",
+		mobile: "",
+		email: "",
+		address: "",
+		pincode: "",
 	});
 
 	useEffect(() => {
@@ -41,10 +42,11 @@ const UpdateProduct = () => {
 			if (responce) {
 				setProductDetails({
 					name: "",
-					price: "",
-					category: "",
-					image: "",
-					description: "",
+					gender: "",
+					mobile: "",
+					email: "",
+					address: "",
+					pincode: "",
 				});
 				navigate("/productlist");
 			}
@@ -58,10 +60,8 @@ const UpdateProduct = () => {
 			<div className="row d-flex">
 				<div className="col">
 					<form className="fl-contact-form" onSubmit={handleSubmit}>
-						<h3>
-							<u>UPDATE PRODUCT</u>
-						</h3>
-						<label className="form-label">PRODUCT NAME</label>
+						<h3>UPDATE PRODUCT</h3>
+
 						<input
 							type="Text"
 							className="form-control mb-3"
@@ -69,53 +69,48 @@ const UpdateProduct = () => {
 							value={productDetails.name}
 							onChange={(e) => handleinput({ name: e.target.value })}
 						/>
-						<label className="form-label">PRICE</label>
+
+						<select
+							id="Select"
+							className="form-select mb-3"
+							value={productDetails.gender}
+							onChange={(e) => handleinput({ gender: e.target.value })}
+						>
+							<option>Gender</option>
+							<option>Male</option>
+							<option>Female</option>
+						</select>
+
 						<input
 							type="Number"
 							className="form-control mb-3"
 							id="exampleInputText"
-							value={productDetails.price}
-							onChange={(e) => handleinput({ price: e.target.value })}
+							value={productDetails.mobile}
+							onChange={(e) => handleinput({ mobile: e.target.value })}
 						/>
-
-						<div className="mb-3">
-							<label for="Select" className="form-label">
-								Category
-							</label>
-							<select
-								id="Select"
-								className="form-select"
-								value={productDetails.category}
-								onChange={(e) => handleinput({ category: e.target.value })}
-							>
-								<option>Select</option>
-								<option>Vegetables</option>
-								<option>Fruits</option>
-								<option>Drinks</option>
-								<option>Snacks</option>
-								<option>Foods</option>
-							</select>
-						</div>
-						<label className="form-label">IMAGE</label>
+						<input
+							type="email"
+							className="form-control mb-3"
+							id="email"
+							value={productDetails.email}
+							onChange={(e) => handleinput({ email: e.target.value })}
+						/>
 						<input
 							type="Text"
 							className="form-control mb-3"
 							id="exampleInputText"
-							value={productDetails.image}
-							onChange={(e) => handleinput({ image: e.target.value })}
+							value={productDetails.address}
+							onChange={(e) => handleinput({ address: e.target.value })}
 						/>
-						<div>
-							<label for="floatingTextarea">DESCRIPTION</label>
-							<textarea
-								type="Text"
-								className="form-control"
-								id="floatingTextarea"
-								value={productDetails.description}
-								onChange={(e) => handleinput({ description: e.target.value })}
-							/>
-						</div>
+						<input
+							type="Number"
+							className="form-control mb-3"
+							id="exampleInputText"
+							value={productDetails.pincode}
+							onChange={(e) => handleinput({ pincode: e.target.value })}
+						/>
 						<button type="submit" className="sf-button">
-							UPDATE PRODUCT
+							UPDATE
 						</button>
 					</form>
 				</div>
