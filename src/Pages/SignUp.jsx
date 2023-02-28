@@ -32,7 +32,7 @@ const SignUp = () => {
 		},
 		onSubmit: async (values) => {
 			try {
-				const response = await axios.post("https://e-commerce-fmcg-server.onrender.com/users/signup", {
+				const response = await axios.post("https://addresss-book-server.onrender.com/users/signup", {
 					...values,
 				});
 				if (response.data) {

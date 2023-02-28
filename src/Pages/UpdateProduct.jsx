@@ -15,16 +15,14 @@ const UpdateProduct = () => {
 		pincode: "",
 	});
 
+	const upDet = async () => {
+		const res = await axios.get(`${process.env.REACT_APP_BASE_URL}/products/${prodID}`);
+		setProductDetails(res.data);
+	};
+
 	useEffect(() => {
-		axios
-			.get(`${process.env.REACT_APP_BASE_URL}/products/${prodID}`)
-			.then((response) => {
-				setProductDetails(response.data);
-			})
-			.catch((error) => {
-				console.log("Error:", error);
-			});
-	});
+		upDet();
+	}, []);
 
 	const handleinput = (value) => {
 		setProductDetails((product) => {
