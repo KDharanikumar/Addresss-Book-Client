@@ -6,7 +6,7 @@ const Home = () => {
 			<div className="container-fluid banner-layer m-auto">
 				<div className="row">
 					<div className="col">
-						<h1 className="home-title d-flex justify-content-center align-items-center mb-5">To-DO List</h1>
+						<h1 className="home-title d-flex justify-content-center align-items-center mb-5">ADDRESS BOOK</h1>
 						<div className="d-flex justify-content-center align-items-center">
 							<SignIn />
 						</div>

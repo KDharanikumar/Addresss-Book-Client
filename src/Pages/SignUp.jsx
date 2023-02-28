@@ -55,15 +55,15 @@ const SignUp = () => {
 		},
 	});
 	return (
-		<section className="signup d-flex justify-content-center text-align-center">
-			<div className="container m-auto">
+		<div className=" container-fluid signup d-flex justify-content-center text-align-center">
+			<div className="container m-auto d-flex justify-content-center align-items-center">
 				<div className="row">
 					<div className="col">
 						<div className="card signup-card text-center p-3">
 							<div className="card-body">
 								<h2 className="mb-5">SIGN UP</h2>
 								<form onSubmit={formik.handleSubmit}>
-									<span style={{ color: "red" }}>{formik.touched.name && formik.errors.name}</span>
+									<span style={{ color: "#ff014f" }}>{formik.touched.name && formik.errors.name}</span>
 									<input
 										type="text"
 										className="form-control mb-3"
@@ -73,7 +73,7 @@ const SignUp = () => {
 										value={formik.values.name}
 									/>
 									<br />
-									<span style={{ color: "red" }}>{formik.touched.email && formik.errors.email}</span>
+									<span style={{ color: "#ff014f" }}>{formik.touched.email && formik.errors.email}</span>
 									<input
 										type="email"
 										className="form-control mb-3"
@@ -83,7 +83,7 @@ const SignUp = () => {
 										value={formik.values.email}
 									/>
 									<br />
-									<span style={{ color: "red" }}>{formik.touched.password && formik.errors.password}</span>
+									<span style={{ color: "#ff014f" }}>{formik.touched.password && formik.errors.password}</span>
 									<input
 										type="password"
 										className="form-control mb-3"
@@ -93,7 +93,7 @@ const SignUp = () => {
 										value={formik.values.password}
 									/>
 									<br />
-									<span style={{ color: "red" }}>
+									<span style={{ color: "#ff014f" }}>
 										{formik.touched.confirmpassword && formik.errors.confirmpassword}
 									</span>
 									<input
@@ -105,7 +105,7 @@ const SignUp = () => {
 										value={formik.values.confirmpassword}
 									/>
 
-									<button type="submit" className="sf-button mb-3" value={"Create Account"}>
+									<button type="submit" className="sf-button mb-3 w-100" value={"Create Account"}>
 										SignUp
 									</button>
 
@@ -123,7 +123,7 @@ const SignUp = () => {
 					</div>
 				</div>
 			</div>
-		</section>
+		</div>
 	);
 };
 

@@ -7,6 +7,17 @@
 	text-decoration: none;
 }
 
+.page-title {
+	font-size: 38px;
+	font-weight: 700;
+}
+
+.container-fluid {
+	height: 100vh;
+	background-color: #000;
+	color: #fff;
+}
+
 /*****************************************************BANNER**************************************************/
 
 .banner {
@@ -40,15 +51,13 @@
 /*****************************************************BUTTON**************************************************/
 
 .sf-button {
-	background-color: #06f561;
+	background-color: #ff014f;
 	color: #fff;
-	border-radius: 50px;
 	border: none;
 	text-align: center;
 	height: fit-content;
 	width: fit-content;
-	padding: 8px 25px;
-	color: #000;
+	padding: 6px 15px;
 	font-size: large;
 	font-weight: 600;
 }
@@ -61,6 +70,9 @@
 
 .home-title {
 	font-weight: 700;
+	font-size: 42px;
+	font-family: Arial, Helvetica, sans-serif;
+	font-style: italic;
 }
 
 /****************************************************************SIGN IN****************************************************************/
@@ -69,9 +81,21 @@
 	width: 350px;
 	box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
 	border: #fff;
+	border-radius: 10;
 }
+.signin-card form input {
+	border-radius: 0;
+	border-color: #ff014f;
+	height: 40px;
+	outline: none;
+}
+
+.signin-card form input:focus {
+	border: 2px solid #ff014f;
+	box-shadow: none;
+}
+
 .signin-card h2 {
-	/* color: #1693ab; */
 	font-weight: 700;
 	font-size: 32px;
 	color: #000;
@@ -79,52 +103,95 @@
 
 .signup-link {
 	text-decoration: none;
-	color: #1693ab;
+	color: #ff014f;
+}
+
+.login-details p {
+	font-size: 16px;
+	font-weight: 600;
+	color: #ff014f;
+	margin-bottom: 0;
 }
 
 /****************************************************************SIGN UP****************************************************************/
 
-.signup {
-	height: 100vh;
-}
-
 .signup-card {
-	margin: auto;
 	width: 350px;
 	box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
 	border: #fff;
+	border-radius: 10;
 }
 
 .signup-card h2 {
-	/* color: #1693ab; */
 	font-weight: 700;
 	font-size: 32px;
 	color: #000;
 }
 
-.signin-link {
-	text-decoration: none;
-	color: #1693ab;
+.signup-card form input {
+	border-radius: 0;
+	border-color: #ff014f;
+	height: 40px;
+	outline: none;
 }
-
-/*************************************************************CONTACT*************************************************************/
-
-.fl-contact-form input,
-textarea {
-	box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
-}
-
-input {
-	height: 50px;
-	border: 1px solid #a8a3a3;
-}
-
-textarea {
-	height: 150px;
-	border: 1px solid #a8a3a3;
-}
-
-.form-control:focus {
-	border-color: #000000;
+.signin-card form input:focus {
+	border: 2px solid #ff014f;
 	box-shadow: none;
+}
+
+/*************************************************************ADD PRODUCT*************************************************************/
+
+.addproduct form {
+	width: 500px;
+}
+
+.addproduct form input,
+.form-select {
+	box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+	border: #fff;
+	border-radius: 0;
+}
+
+/*************************************************************PRODUCT LIST*************************************************************/
+
+table,
+th,
+td {
+	border: 1px solid #fff;
+	border-collapse: collapse;
+}
+
+th {
+	background-color: #ff014f;
+	text-align: center;
+	font-size: 16px;
+	font-weight: 800;
+	color: #fff;
+	padding: 20px;
+}
+
+td {
+	text-align: center;
+	padding: 10px;
+	font-size: 16px;
+	font-weight: 600;
+}
+
+.edit-icon {
+	font-size: 30px;
+	color: #ff014f;
+	cursor: pointer;
+}
+
+/*************************************************************UPDATE PRODUCT*************************************************************/
+
+.updateproduct form {
+	width: 500px;
+}
+
+.updateproduct form input,
+.form-select {
+	box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+	border: #fff;
+	border-radius: 0;
 }

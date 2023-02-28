@@ -54,8 +54,8 @@ const SignIn = () => {
 							<div className="card-body">
 								<h2 className="mb-5">SIGN IN</h2>
 
-								<form onSubmit={formik.handleSubmit}>
-									<span style={{ color: "red" }}>{formik.touched.email && formik.errors.email}</span>
+								<form className="mb-3" onSubmit={formik.handleSubmit}>
+									<span style={{ color: "#ff014f" }}>{formik.touched.email && formik.errors.email}</span>
 									<input
 										type="email"
 										className="form-control mb-4"
@@ -64,18 +64,18 @@ const SignIn = () => {
 										onChange={formik.handleChange}
 										value={formik.values.email}
 									/>
-									<span style={{ color: "red" }}>{formik.touched.password && formik.errors.password}</span>
+									<span style={{ color: "#ff014f" }}>{formik.touched.password && formik.errors.password}</span>
 									<input
 										type="password"
-										className="form-control mb-5"
+										className="form-control mb-4"
 										name="password"
 										placeholder="Password"
 										onChange={formik.handleChange}
 										value={formik.values.password}
 									/>
 
-									<button type="submit" className="sf-button mb-3" value={"Login"}>
-										SignIn
+									<button type="submit" className="sf-button mb-3 w-100" value={"Login"}>
+										SIGN IN
 									</button>
 									<div>
 										<span className="fw-bolder text-black">Don’t Have an Account?</span>
@@ -86,6 +86,10 @@ const SignIn = () => {
 										</span>
 									</div>
 								</form>
+								<div className="login-details">
+									<p>User : admin@gmail.com</p>
+									<p>Password : welcome</p>
+								</div>
 							</div>
 						</div>
 					</div>

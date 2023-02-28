@@ -54,66 +54,67 @@ const UpdateProduct = () => {
 	};
 
 	return (
-		<div className="container">
-			<div className="row d-flex">
-				<div className="col">
-					<form className="fl-contact-form" onSubmit={handleSubmit}>
-						<h3>UPDATE PRODUCT</h3>
+		<section>
+			<div className="container-fluid updateproduct d-flex justify-content-center align-items-center">
+				<div className="container d-flex justify-content-center align-items-center">
+					<div className="row d-flex">
+						<form onSubmit={handleSubmit}>
+							<h1 className="page-title my-5 text-center">UPDATE DETAILS</h1>
+							<input
+								type="Text"
+								className="form-control mb-4"
+								id="exampleInputText"
+								value={productDetails.name}
+								onChange={(e) => handleinput({ name: e.target.value })}
+							/>
 
-						<input
-							type="Text"
-							className="form-control mb-3"
-							id="exampleInputText"
-							value={productDetails.name}
-							onChange={(e) => handleinput({ name: e.target.value })}
-						/>
+							<select
+								id="Select"
+								className="form-select mb-4"
+								value={productDetails.gender}
+								onChange={(e) => handleinput({ gender: e.target.value })}
+							>
+								<option>Gender</option>
+								<option>Male</option>
+								<option>Female</option>
+							</select>
 
-						<select
-							id="Select"
-							className="form-select mb-3"
-							value={productDetails.gender}
-							onChange={(e) => handleinput({ gender: e.target.value })}
-						>
-							<option>Gender</option>
-							<option>Male</option>
-							<option>Female</option>
-						</select>
-
-						<input
-							type="Number"
-							className="form-control mb-3"
-							id="exampleInputText"
-							value={productDetails.mobile}
-							onChange={(e) => handleinput({ mobile: e.target.value })}
-						/>
-						<input
-							type="email"
-							className="form-control mb-3"
-							id="email"
-							value={productDetails.email}
-							onChange={(e) => handleinput({ email: e.target.value })}
-						/>
-						<input
-							type="Text"
-							className="form-control mb-3"
-							id="exampleInputText"
-							value={productDetails.address}
-							onChange={(e) => handleinput({ address: e.target.value })}
-						/>
-						<input
-							type="Number"
-							className="form-control mb-3"
-							id="exampleInputText"
-							value={productDetails.pincode}
-							onChange={(e) => handleinput({ pincode: e.target.value })}
-						/>
-						<button type="submit" className="sf-button">
-							UPDATE
-						</button>
-					</form>
+							<input
+								type="Number"
+								className="form-control mb-4"
+								id="exampleInputText"
+								value={productDetails.mobile}
+								onChange={(e) => handleinput({ mobile: e.target.value })}
+							/>
+							<input
+								type="email"
+								className="form-control mb-4"
+								id="email"
+								value={productDetails.email}
+								onChange={(e) => handleinput({ email: e.target.value })}
+							/>
+							<input
+								type="Text"
+								className="form-control mb-4"
+								id="exampleInputText"
+								value={productDetails.address}
+								onChange={(e) => handleinput({ address: e.target.value })}
+							/>
+							<input
+								type="Number"
+								className="form-control mb-5"
+								id="exampleInputText"
+								value={productDetails.pincode}
+								onChange={(e) => handleinput({ pincode: e.target.value })}
+							/>
+							<button type="submit" className="sf-button w-100">
+								UPDATE
+							</button>
+						</form>
+					</div>
 				</div>
 			</div>
-		</div>
+		</section>
 	);
 };
 
