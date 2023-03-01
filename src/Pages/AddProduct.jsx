@@ -42,12 +42,13 @@ const AddProduct = () => {
 		}
 	};
 	return (
-		<section>
+		<section className="addproduct">
 			<div className="container-fluid addproduct d-flex justify-content-center align-items-center">
 				<div className="container p-0  d-flex justify-content-center align-items-center">
 					<div className="row">
 						<form onSubmit={handleSubmit}>
 							<h1 className="page-title my-5 text-center">ADD DETAILS</h1>
+
 							<input
 								type="Text"
 								className="form-control mb-4"
@@ -106,7 +107,7 @@ const AddProduct = () => {
 							/>
 
 							<button type="submit" className="sf-button w-100" value="Add an Product">
-								ADD PRODUCT NOW
+								ADD DETAILS NOW
 							</button>
 						</form>
 					</div>

@@ -39,6 +39,7 @@ const ProductList = () => {
 						<div className="col">
 							<div className="my-5 p-0 d-flex justify-content-between align-items-center">
 								<h1 className="page-title">ADDRESS BOOK</h1>
+
 								<Link to="/">
 									<button className="sf-button mb-5 ">LOGOUT</button>
 								</Link>
@@ -49,7 +50,7 @@ const ProductList = () => {
 								</Link>
 							</div>
 
-							<table className="w-100">
+							<table className="w-100 mb-5">
 								<thead>
 									<tr>
 										<th>NAME</th>

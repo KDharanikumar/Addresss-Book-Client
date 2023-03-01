@@ -55,8 +55,8 @@ const SignUp = () => {
 		},
 	});
 	return (
-		<div className=" container-fluid signup d-flex justify-content-center text-align-center">
-			<div className="container m-auto d-flex justify-content-center align-items-center">
+		<section className="Home banner-signup bg-danger d-flex justify-content-center text-align-center">
+			<div className="container-fluid banner-layer m-auto d-flex justify-content-center align-items-center">
 				<div className="row">
 					<div className="col">
 						<div className="card signup-card text-center p-3">
@@ -123,7 +123,7 @@ const SignUp = () => {
 					</div>
 				</div>
 			</div>
-		</div>
+		</section>
 	);
 };
 

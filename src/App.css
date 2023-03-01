@@ -21,9 +21,14 @@
 /*****************************************************BANNER**************************************************/
 
 .banner {
-	background-image: url(/src/Images/Banner.webp);
-	height: 700px;
-	width: 100%;
+	background-image: url(https://images.pexels.com/photos/45718/pexels-photo-45718.jpeg?auto=compress&cs=tinysrgb&w=600);
+	background-repeat: no-repeat;
+	background-size: cover;
+	position: relative;
+	background-position: center center;
+}
+.banner-signup {
+	background-image: url(https://images.pexels.com/photos/18104/pexels-photo.jpg?auto=compress&cs=tinysrgb&w=600);
 	background-repeat: no-repeat;
 	background-size: cover;
 	position: relative;
@@ -43,7 +48,7 @@
 	top: 50%;
 	left: 50%;
 	transform: translate(-50%, -50%);
-	background-color: rgba(0, 0, 0, 0.5);
+	background-color: rgba(0, 0, 0, 0.6);
 	opacity: 1;
 	overflow: hidden;
 }
@@ -153,6 +158,10 @@
 }
 
 /*************************************************************PRODUCT LIST*************************************************************/
+
+.productlist {
+	height: max-content;
+}
 
 table,
 th,
