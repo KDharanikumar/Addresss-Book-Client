@@ -33,26 +33,27 @@ const ProductList = () => {
 
 	return (
 		<section>
-			<div className="container-fluid productlist bg-black">
+			<div className="container-fluid productlist">
 				<div className="container p-0">
 					<div className="row">
-						<div className="col">
-							<div className="my-5 p-0 d-flex justify-content-between align-items-center">
-								<h1 className="page-title">ADDRESS BOOK</h1>
+						{/* <div className="col"> */}
+						<div className="my-5 p-0 d-flex justify-content-between align-items-center">
+							<h1 className="page-title">ADDRESS BOOK</h1>
 
-								<Link to="/">
-									<button className="sf-button mb-5 ">LOGOUT</button>
-								</Link>
-							</div>
-							<div className="d-flex justify-content-center">
-								<Link to="/addproduct">
-									<button className="sf-button mb-5 ">ADD DETAILS</button>
-								</Link>
-							</div>
+							<Link to="/">
+								<button className="sf-button mb-5 ">LOGOUT</button>
+							</Link>
+						</div>
+						<div className="d-flex justify-content-center">
+							<Link to="/addproduct">
+								<button className="sf-button mb-5 ">ADD DETAILS</button>
+							</Link>
+						</div>
 
-							<table className="w-100 mb-5">
+						<div className="table-responsive">
+							<table className="table mb-5">
 								<thead>
-									<tr>
+									<tr className="table-head">
 										<th>NAME</th>
 										<th>GENDER</th>
 										<th>MOBILE</th>
@@ -86,6 +87,7 @@ const ProductList = () => {
 								</tbody>
 							</table>
 						</div>
+						{/* </div> */}
 					</div>
 				</div>
 			</div>

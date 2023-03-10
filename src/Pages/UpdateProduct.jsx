@@ -55,9 +55,9 @@ const UpdateProduct = () => {
 
 	return (
 		<section>
-			<div className="container-fluid updateproduct d-flex justify-content-center align-items-center">
-				<div className="container d-flex justify-content-center align-items-center">
-					<div className="row d-flex">
+			<div className="container-fluid updateproduct">
+				<div className="container p-0 d-flex justify-content-center align-items-center">
+					<div className="row">
 						<form onSubmit={handleSubmit}>
 							<h1 className="page-title my-5 text-center">UPDATE DETAILS</h1>
 							<input

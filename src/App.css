@@ -13,7 +13,7 @@
 }
 
 .container-fluid {
-	height: 100vh;
+	min-height: 100vh;
 	background-color: #000;
 	color: #fff;
 }
@@ -147,7 +147,7 @@
 /*************************************************************ADD PRODUCT*************************************************************/
 
 .addproduct form {
-	width: 500px;
+	width: 400px;
 }
 
 .addproduct form input,
@@ -159,15 +159,20 @@
 
 /*************************************************************PRODUCT LIST*************************************************************/
 
-.productlist {
+/* .productlist {
 	height: max-content;
-}
+} */
 
 table,
 th,
 td {
 	border: 1px solid #fff;
 	border-collapse: collapse;
+	color: #fff;
+}
+
+.table-head {
+	background-color: #ff014f;
 }
 
 th {
@@ -195,7 +200,7 @@ td {
 /*************************************************************UPDATE PRODUCT*************************************************************/
 
 .updateproduct form {
-	width: 500px;
+	width: 400px;
 }
 
 .updateproduct form input,

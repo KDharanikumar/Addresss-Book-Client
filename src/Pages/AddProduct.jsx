@@ -43,9 +43,10 @@ const AddProduct = () => {
 	};
 	return (
 		<section className="addproduct">
-			<div className="container-fluid addproduct d-flex justify-content-center align-items-center">
-				<div className="container p-0  d-flex justify-content-center align-items-center">
+			<div className="container-fluid">
+				<div className="container p-0 d-flex justify-content-center align-items-center">
 					<div className="row">
+						{/* <div className="col"> */}
 						<form onSubmit={handleSubmit}>
 							<h1 className="page-title my-5 text-center">ADD DETAILS</h1>
 
@@ -110,6 +111,7 @@ const AddProduct = () => {
 								ADD DETAILS NOW
 							</button>
 						</form>
+						{/* </div> */}
 					</div>
 				</div>
 			</div>
